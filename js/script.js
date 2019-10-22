@@ -59,7 +59,8 @@ console.log(quotes);
 ***/
 
 function getRandomQuote(){
-
+  randomNumber = Math.floor(Math.random() * quotes.length);
+  console.log(randomNumber);
 
   return quote;
 }
