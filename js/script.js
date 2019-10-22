@@ -47,9 +47,9 @@ let quotes = [{
 
 ];
 
-/***
+/***********************************************
   `getRandomQuote` function pulls out a random quote from the above array:
-***/
+***********************************************/
 
 function getRandomQuote() {
   //uses the Math library to call a random number between 0 and length of the array
@@ -59,9 +59,9 @@ function getRandomQuote() {
   return quotes[randomNumber];
 }
 
-/***
+/***********************************************
   random background colour
-***/
+***********************************************/
 
 // https://www.w3resource.com/javascript-exercises/javascript-math-exercise-40.php
 function random_bg_color() {
@@ -75,16 +75,17 @@ function random_bg_color() {
   document.getElementById('loadQuote').style.background = bgColor;
 }
 
-/***
-  call printQuote on interval
-***/
+/***********************************************
+  interval function
+***********************************************/
 
 //automatically change quote after 10s of previous quote being displayed
+// use arrow function to call printquote on an interval of 10s
 const interval = () => setInterval(printQuote, 10000);
 
-/***
+/***********************************************
    `printQuote` function to display random quote
-***/
+***********************************************/
 function printQuote() {
 
   //setup variables for the function
@@ -111,7 +112,9 @@ function printQuote() {
   //change the value of quote-box to be the htmlString
   document.getElementById('quote-box').innerHTML = htmlString;
 
+  //call the random colour function
   random_bg_color();
+  //call the interval function
   interval();
 
 }
@@ -125,11 +128,3 @@ function printQuote() {
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-// document.getElementById('loadQuote').addEventListener("click", () => {
-//   printQuote();
-// });
-
-//automatically change quote after 10s of previous quote being displayed
-// let interval;
-// interval = setInterval(printQuote, 10000);
