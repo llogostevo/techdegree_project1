@@ -19,40 +19,38 @@ let quotes = [
   { 
     quote: 'The greatest glory in living lies not in never falling, but in rising every time we fall.',
     source: 'Nelson Mandela',
-    citation: '',
+    citation: 'Speech',
     year: '1999'
   },
   { 
     quote: 'The way to get started is to quit talking and begin doing.',
     source: 'Walt Disney',
-    citation: '',
     year: '1962'
 
   },
   { 
     quote: "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",
     source: 'Steve Jobs',
-    citation: '',
+    citation: 'Harvard Speech',
     year: '2004'
 
   },
   { 
     quote: 'If life were predictable it would cease to be life, and be without flavor.',
     source: 'Eleanor Roosevelt',
-    citation: '',
     year: '1944'
 
   },
   { 
     quote: "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
     source: 'Oprah Winfrey',
-    citation: '',
-    year: '2006
+    citation: 'Autobiography',
+    year: '2006'
   }
 
 ];
 
-
+console.log(quotes);
 
 /***
   Create the `getRandomQuote` function to:
@@ -60,6 +58,11 @@ let quotes = [
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
+function getRandomQuote(){
+
+
+  return quote;
+}
 
 
 
