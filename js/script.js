@@ -60,6 +60,29 @@ function getRandomQuote() {
 }
 
 /***
+  random background colour
+***/
+
+// https://www.w3resource.com/javascript-exercises/javascript-math-exercise-40.php
+function random_bg_color() {
+  // random numbers between 0 and 256 for RGB
+  let x = Math.floor(Math.random() * 256);
+  let y = Math.floor(Math.random() * 256);
+  let z = Math.floor(Math.random() * 256);
+  //set the background to equal the random number using RGB
+  let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  document.body.style.background = bgColor;
+  document.getElementById('loadQuote').style.background = bgColor;
+}
+
+/***
+  call printQuote on interval
+***/
+
+//automatically change quote after 10s of previous quote being displayed
+const interval = () => setInterval(printQuote, 10000);
+
+/***
    `printQuote` function to display random quote
 ***/
 function printQuote() {
@@ -88,7 +111,12 @@ function printQuote() {
   //change the value of quote-box to be the htmlString
   document.getElementById('quote-box').innerHTML = htmlString;
 
+  random_bg_color();
+  interval();
+
 }
+
+
 
 /***
   When the "Show another quote" button is clicked, the event listener 
@@ -98,6 +126,10 @@ function printQuote() {
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+// document.getElementById('loadQuote').addEventListener("click", () => {
+//   printQuote();
+// });
+
 //automatically change quote after 10s of previous quote being displayed
-let interval;
-interval = setInterval(printQuote, 10000);
+// let interval;
+// interval = setInterval(printQuote, 10000);
