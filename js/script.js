@@ -119,8 +119,6 @@ function printQuote() {
 
 }
 
-
-
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
