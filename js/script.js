@@ -71,13 +71,13 @@ function printQuote() {
 
 
   // set citation html if it exists
-  if ("citation" in randomQuote) {
+  if (randomQuote.citation) {
     //citation property exists
     citation = '<span class="citation">' + randomQuote.citation + '</span>';
   }
 
   // set year html if it exists
-  if ("year" in randomQuote) {
+  if (randomQuote.year) {
     //year property exists
     year = '<span class="year">' + randomQuote.year + '</span>';
   }
@@ -97,3 +97,7 @@ function printQuote() {
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+//automatically change quote after 10s of previous quote being displayed
+let interval;
+interval = setInterval(printQuote, 10000);
