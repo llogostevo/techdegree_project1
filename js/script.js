@@ -81,8 +81,10 @@ function random_bg_color() {
 
 //automatically change quote after 10s of previous quote being displayed
 // use arrow function to call printquote on an interval of 10s
-const interval = () => setInterval(printQuote, 10000);
+function interval() {
+  setInterval(printQuote, 10000);
 
+}
 /***********************************************
    `printQuote` function to display random quote
 ***********************************************/
