@@ -50,8 +50,6 @@ let quotes = [
 
 ];
 
-console.log(quotes);
-
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
@@ -64,6 +62,8 @@ function getRandomQuote(){
 
   return quote;
 }
+
+getRandomQuote();
 
 
 
