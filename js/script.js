@@ -85,15 +85,16 @@ function random_bg_color() {
 ***********************************************/
 
 //automatically change quote after 10s of previous quote being displayed
-// use arrow function to call printquote on an interval of 10s
 function interval() {
-  setInterval(printQuote, 10000);
-
+  //set variable t to contain the timer
+  let t;
+  //clear previous calls of the set interval function
+  clearInterval(t);
+  //set the interval to 10s 
+  t = setInterval(printQuote, 10000);
 }
 
 // declare randomQuote as global variable
-
-
 
 /***********************************************
    `printQuote` function to display random quote
@@ -144,7 +145,6 @@ function printQuote() {
   random_bg_color();
   //call the interval function
   interval();
-
 }
 
 /***
