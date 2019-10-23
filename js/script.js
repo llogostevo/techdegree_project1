@@ -112,15 +112,16 @@ function printQuote() {
   }
 
   const entries = Object.entries(randomQuote);
-
+  let propertyHTML="";
   for (const [attribute, value] of entries) {
     if ((attribute != 'quote') && (attribute != 'source')) {
-      propertyHTML = getProperty(attribute);
+      propertyHTML += getProperty(attribute);
     }
   }
+  console.log(propertyHTML);
 
   // create the quote as HTML
-  let htmlString = '<p class="quote">' + randomQuote.quote + '</p><p class="source">' + randomQuote.source + getProperty("citation") + getProperty("year") + '</p>';
+  let htmlString = '<p class="quote">' + randomQuote.quote + '</p><p class="source">' + randomQuote.source + propertyHTML + '</p>';
 
   //change the value of quote-box to be the htmlString
   document.getElementById('quote-box').innerHTML = htmlString;
