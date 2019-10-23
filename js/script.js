@@ -32,7 +32,7 @@ let quotes = [{
     source: 'Steve Jobs',
     citation: 'Harvard Speech',
     year: '2004',
-    age: 'Aged: 46'
+    age: '46 years old'
 
   },
   {
@@ -45,7 +45,9 @@ let quotes = [{
     quote: "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
     source: 'Oprah Winfrey',
     citation: 'Autobiography',
-    year: '2006'
+    year: '2006',
+    age: '52 years old'
+
   }
 
 ];
