@@ -111,16 +111,21 @@ function printQuote() {
     return result;
   }
 
+  //create a new array with the entries from randomquote
   const entries = Object.entries(randomQuote);
-  let propertyHTML="";
+  // set an empty string array to contain the property HTML
+  let propertyHTML = "";
+  //loop through the array
   for (const [attribute, value] of entries) {
+    //only look for properties that are not quote or source
     if ((attribute != 'quote') && (attribute != 'source')) {
       propertyHTML += getProperty(attribute);
     }
   }
-  console.log(propertyHTML);
 
   // create the quote as HTML
+  // add in quote and source as these will appear for all objects
+  // use the propertyHTML variable to add in any other properties 
   let htmlString = '<p class="quote">' + randomQuote.quote + '</p><p class="source">' + randomQuote.source + propertyHTML + '</p>';
 
   //change the value of quote-box to be the htmlString
