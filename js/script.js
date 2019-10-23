@@ -17,19 +17,22 @@ let quotes = [{
     quote: 'The greatest glory in living lies not in never falling, but in rising every time we fall.',
     source: 'Nelson Mandela',
     citation: 'Speech',
-    year: '1999'
+    year: '1999', 
+    location: 'South Africa'
   },
   {
     quote: 'The way to get started is to quit talking and begin doing.',
     source: 'Walt Disney',
-    year: '1962'
+    year: '1962',
+    location: 'Hollywood'
 
   },
   {
     quote: "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",
     source: 'Steve Jobs',
     citation: 'Harvard Speech',
-    year: '2004'
+    year: '2004',
+    Age: '46'
 
   },
   {
