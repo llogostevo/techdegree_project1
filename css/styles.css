@@ -71,6 +71,12 @@ body {
   font-style: normal;
 }
 
+/* captures any other properties pulled from the object/array */
+.otherProp:before {
+  content: ", ";
+  font-style: normal;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;

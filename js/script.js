@@ -17,7 +17,7 @@ let quotes = [{
     quote: 'The greatest glory in living lies not in never falling, but in rising every time we fall.',
     source: 'Nelson Mandela',
     citation: 'Speech',
-    year: '1999', 
+    year: '1999',
     location: 'South Africa'
   },
   {
@@ -32,7 +32,7 @@ let quotes = [{
     source: 'Steve Jobs',
     citation: 'Harvard Speech',
     year: '2004',
-    Age: '46'
+    age: 'Aged: 46'
 
   },
   {
@@ -108,8 +108,12 @@ function printQuote() {
     // set  html if it exists
     // use [] notation rather than . notation
     if (randomQuote[property]) {
-      //citation property exists
-      result = '<span class="' + property + '">' + randomQuote[property] + '</span>';
+      // property exists
+      if ((property == "citation") || (property == "year")) {
+        result = '<span class="' + property + '">' + randomQuote[property] + '</span>';
+      } else {
+        result = '<span class="otherProp">' + randomQuote[property] + '</span>';
+      }
     }
     return result;
   }
