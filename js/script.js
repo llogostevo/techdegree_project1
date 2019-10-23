@@ -85,31 +85,42 @@ function interval() {
   setInterval(printQuote, 10000);
 
 }
+
+// declare randomQuote as global variable
+
+
+
 /***********************************************
    `printQuote` function to display random quote
 ***********************************************/
 function printQuote() {
-
-  //setup variables for the function
   let randomQuote = getRandomQuote();
-  let citation = "";
-  let year = "";
 
+  /***********************************************
+   `checkProperty` function to check a property in an object
+***********************************************/
 
-  // set citation html if it exists
-  if (randomQuote.citation) {
-    //citation property exists
-    citation = '<span class="citation">' + randomQuote.citation + '</span>';
+  function getProperty(property) {
+    let result = "";
+    // set  html if it exists
+    // use [] notation rather than . notation
+    if (randomQuote[property]) {
+      //citation property exists
+      result = '<span class="' + property + '">' + randomQuote[property] + '</span>';
+    }
+    return result;
   }
 
-  // set year html if it exists
-  if (randomQuote.year) {
-    //year property exists
-    year = '<span class="year">' + randomQuote.year + '</span>';
+  const entries = Object.entries(randomQuote);
+
+  for (const [attribute, value] of entries) {
+    if ((attribute != 'quote') && (attribute != 'source')) {
+      propertyHTML = getProperty(attribute);
+    }
   }
 
   // create the quote as HTML
-  let htmlString = '<p class="quote">' + randomQuote.quote + '</p><p class="source">' + randomQuote.source + citation + year + '</p>';
+  let htmlString = '<p class="quote">' + randomQuote.quote + '</p><p class="source">' + randomQuote.source + getProperty("citation") + getProperty("year") + '</p>';
 
   //change the value of quote-box to be the htmlString
   document.getElementById('quote-box').innerHTML = htmlString;
