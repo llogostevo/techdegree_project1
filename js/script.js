@@ -83,11 +83,12 @@ function random_bg_color() {
 /***********************************************
   interval function
 ***********************************************/
-
+ //set variable t to contain the timer
+ let t;
+ 
 //automatically change quote after 10s of previous quote being displayed
 function interval() {
-  //set variable t to contain the timer
-  let t;
+ 
   //clear previous calls of the set interval function
   clearInterval(t);
   //set the interval to 10s 
