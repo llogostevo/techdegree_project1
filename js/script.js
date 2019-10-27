@@ -154,6 +154,6 @@ function printQuote() {
   function.
 ***/
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
 //calls interval function which means quote will change after the designated interval even if the button isn't clicked
 interval();
